@@ -1,5 +1,5 @@
 # printer handler
-work with backend that made by Java(springboot).
+work with a frontend that made by Java(springboot).
 
 ## How to install
 to install dependency,
