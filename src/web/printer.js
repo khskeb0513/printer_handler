@@ -3,7 +3,7 @@ const router = new Router()
 const printerService = require('../controller/printerService')
 
 router.get('/', async ctx => {
-    ctx.body = 'printer handler online'
+    ctx.body = '/printer'
 })
 
 router.get('/list', async ctx => {

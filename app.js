@@ -5,10 +5,14 @@ const router = new Router()
 
 const port = 4000
 
-const indexRouter = require('./src/web')
+const indexRouter = require('./src/web/index')
+const printerRouter = require('./src/web/printer')
+
+const routes = router.use('/', indexRouter.routes())
+    .use('/printer', printerRouter.routes())
 
 koa
-    .use(indexRouter.routes())
+    .use(routes.routes())
     .use(router.allowedMethods())
 
 koa.listen(port, () => {
